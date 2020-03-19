@@ -60,7 +60,7 @@ public class ServiceUserImpl implements ServiceUser {
     public void updateUserByIdService(User user) {
         try {
             if (user != null) {
-                    userDAO.updateUserById(user);
+                userDAO.updateUserById(user);
             }
         } catch (DBException e) {
 

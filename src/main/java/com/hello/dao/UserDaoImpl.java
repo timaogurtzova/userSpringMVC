@@ -72,7 +72,8 @@ public class UserDaoImpl implements UserDao {
     public void addUser(User user) throws DBException {
         try {
             session.save(user);
-        } catch (HibernateException e) {
+        } catch (Throwable e) {
+            session.clear();
             throw new DBException(e);
         }
     }

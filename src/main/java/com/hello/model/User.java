@@ -13,7 +13,10 @@ public class User {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "name")
+    @Column(name = "name",
+            nullable = false,
+            unique = true,
+            length = 32)
     private String name;
 
     @Column(name = "age")
